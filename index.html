@@ -24,7 +24,7 @@
 .w3-theme-purple {color:#fff !important; background-color:#5D3B8F !important}
 .w3-theme-imapink {color:#fff !important; background-color:#BA0262 !important}
 .w3-theme-lightteal{color:#000!important; background-color:#99D0C8 !important} 
-.w3-theme-darktealblue{color:#000!important; background-color:#0B87A3 !important} 
+.w3-theme-darktealblue{color:#000!important; background-color:#0F8F9A !important} 
 
 
         
@@ -50,45 +50,106 @@
 <body>
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-theme-lightteal w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow"><i class="fa fa-home"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">About</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Events</a>
-    <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Committee</a>
-    <a href="previous.html" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Previous Events</a>
+    <div class="w3-bar w3-theme-darktealblue w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow"><i class="fa fa-home"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">About</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Upcoming Events</a>
+      <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Committee</a>
+      <a href="previous.html" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Previous Events</a>
+      </div>
+</div>
+
+  
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-theme-darktealblue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Upcoming Events</a>
+    <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Committee</a>
+    <a href="#previous.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Previous Events</a>
+</div>
+
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Header Image (Computer) -->
+  <div class="mySlides w3-display-container w3-center w3-hide-small">
+    <img src="/images/Header-wide" alt="Header-wide" style="width:100%">
     </div>
-</div>
-
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-theme-lightteal w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Events</a>
-  <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Committee</a>
-  <a href="#previous.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Previous Events</a>
-</div>
-
-
-
-
-
-<!-- Team Container -->
-
-
-<div class="w3-container w3-padding-64 w3-center" id="team">
-  <div class="w3-row w3-center">
-  <h2 class="w3-wide">Current Committee (22/23)</h2>
-    <div class="w3-col w3-container" style="width:16.66%"><img src="/images/jenny_pic.png" alt="JP" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Jenny Power</h4><p>President</p></div>
-    <div class="w3-col w3-container" style="width:16.66%"><img src="/images/kat_pic.png" alt="KP" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Kat Phillips</h4><p>Vice-President</p></div>
-    <div class="w3-col  w3-container" style="width:16.66%"><img src="/images/seb_pic.png" alt="SS" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Seb Scott</h4><p>Secretary</p></div>
-    <div class="w3-col w3-container" style="width:16.66%"><img src="/images/jeremy_pic.png" alt="JW" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Jeremy Worsfold</h4><p>Treasurer</p></div>
-    <div class="w3-col w3-container" style="width:16.66%"><img src="/images/alex_pic.png" alt="AT" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Alex Trenam</h4><p>Publicity Officer</p></div>
-    <div class="w3-col w3-container" style="width:16.66%"><img src="/images/silvia_pic.png" alt="AT" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Silvia Gazzola</h4><p>Faculty Advisor</p></div>
   </div>
+  
+  <!-- Header Image (Phone) -->
+  <div class="mySlides w3-display-container w3-center w3-hide-medium w3-hide-large">
+    <img src="/images/Header-phone" alt="Header-phone" style="width:100%">
+    </div>
+  </div>
+  
+
+  <!-- About the Society -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">About</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  
+  
+  
+<!-- Committee (Wide) -->  
+<div class="w3-cell-row w3-center w3-hide-small">
+<h2 class="w3-wide">Current Committee (22/23)</h2>
+  <div class="w3-col w3-container" style="width:16.66%"><img src="/images/jenny_pic.png" alt="JP" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Jenny Power</h4><p>President</p></div>
+  <div class="w3-col w3-container" style="width:16.66%"><img src="/images/kat_pic.png" alt="KP" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Kat Phillips</h4><p>Vice-President</p></div>
+  <div class="w3-col  w3-container" style="width:16.66%"><img src="/images/seb_pic.png" alt="SS" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Seb Scott</h4><p>Secretary</p></div>
+  <div class="w3-col w3-container" style="width:16.66%"><img src="/images/jeremy_pic.png" alt="JW" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Jeremy Worsfold</h4><p>Treasurer</p></div>
+  <div class="w3-col w3-container" style="width:16.66%"><img src="/images/alex_pic.png" alt="AT" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Alex Trenam</h4><p>Publicity Officer</p></div>
+  <div class="w3-col w3-container" style="width:16.66%"><img src="/images/silvia_pic.png" alt="SG" style="width:70%" class="w3-circle w3-hover-opacity"><h4>Silvia Gazzola</h4><p>Faculty Advisor</p></div>
+<p>For all enquires please email (the email)</p>
 </div>
 
-</body>
+  
+<!-- Committee (Phone) -->    
+<div class="w3-container w3-padding-64 w3-center w3-hide-medium w3-hide-large" id="team">
+    <h2 class="w3-wide">Current Committee (22/23)</h2>
+    <div class="w3-row">
+        <div class="w3-col  w3-container" style="width:50%"><img src="/images/jenny_pic.png" alt="JP" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h3>Jenny Power</h3>
+        <p>President</p></div>
+         <div class="w3-col  w3-container" style="width:50%"><img src="/images/kat_pic.png" alt="KP" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h3>Kat Phillips</h3>
+        <p>Vice President</p></div>
+        <br>
+        <div class="w3-col  w3-container" style="width:50%"><img src="/images/seb_pic.png" alt="SS" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h3>Seb Scott</h3>
+        <p>Secretary</p></div>
+         <div class="w3-col  w3-container" style="width:50%"><img src="/images/jeremy_pic.png" alt="JW" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h3>Jeremy Worsfold</h3>
+        <p>Treasurer</p></div>
+        <br>
+        <div class="w3-col  w3-container" style="width:50%"><img src="/images/alex_pic.png" alt="AT" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h3>Alex Trenam</h3>
+        <p>Publicity Officer</p></div>
+        <div class="w3-col  w3-container" style="width:50%"><img src="/images/silvia_pic.png" alt="AT" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h3>Silvia Gazzola</h3>
+        <p>Faculty Advisor</p></div>
+      </div>
+      <br>
+      
+</div>
+
+
+
+  
+<!-- End Page Content -->
+</div>
+
+<footer class="w3-container w3-padding-16 w3-center w3-opacity w3-theme-white">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 
 
 
