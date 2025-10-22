@@ -1,172 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bath SIAM IMA</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <script src="https://kit.fontawesome.com/e9dd2cd32d.js" crossorigin="anonymous"></script>
+  <title>Bath SIAM IMA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <script src="https://kit.fontawesome.com/e9dd2cd32d.js" crossorigin="anonymous"></script>
+
+  <style>
+  body {
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+  }
+
+  /* Theme Colours */
+  .w3-theme-yellow {color:#000 !important; background-color:#FFCE74 !important}
+  .w3-theme-green {color:#000 !important; background-color: #80BF8A !important}
+  .w3-theme-siamteal {color:#000 !important; background-color: #00AFA0  !important}
+  .w3-theme-tealblue {color:#000 !important; background-color:#38B4C3 !important}
+  .w3-theme-blue {color:#000 !important; background-color:#6FB9E5 !important}
+  .w3-theme-siamblue {color:#fff !important; background-color:#0073BC!important}
+  .w3-theme-purple {color:#fff !important; background-color:#5D3B8F !important}
+  .w3-theme-imapink {color:#fff !important; background-color:#BA0262 !important}
+  .w3-theme-lightteal{color:#000!important; background-color:#99D0C8 !important} 
+  .w3-theme-darktealblue{color:#fff!important; background-color:#0F8F9A !important} 
+
+  /* Event Section Styling */
+  #events {
+    background: #fff;
+    /* Reduced vertical padding to tighten gap with About section */
+    padding: 40px 20px;
+  }
+
+
+  #events h2 {
+    font-size: 48px;
+    color: #0F8F9A;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .event-card {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    border-radius: 25px;
+    padding: 50px 40px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+    animation: fadeInUp 1.2s ease;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .event-card h3 {
+    color: #0073BC;
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  .event-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  .event-card a.w3-button {
+    transition: all 0.3s ease;
+    margin-top: 25px;
+  }
+
+  .event-card a.w3-button:hover {
+    transform: scale(1.05);
+  }
+
+  footer {
+    padding: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+  }
+  </style>
 </head>
-
-<!-- Importing Colours -->
-<style>
-.w3-theme-yellow {color:#000 !important; background-color:#FFCE74 !important}
-.w3-theme-green {color:#000 !important; background-color: #80BF8A !important}
-.w3-theme-siamteal {color:#000 !important; background-color: #00AFA0  !important}
-.w3-theme-tealblue {color:#000 !important; background-color:#38B4C3 !important}
-.w3-theme-blue {color:#000 !important; background-color:#6FB9E5 !important}
-.w3-theme-siamblue {color:#fff !important; background-color:#0073BC!important}
-.w3-theme-purple {color:#fff !important; background-color:#5D3B8F !important}
-.w3-theme-imapink {color:#fff !important; background-color:#BA0262 !important}
-.w3-theme-lightteal{color:#000!important; background-color:#99D0C8 !important} 
-.w3-theme-darktealblue{color:#fff!important; background-color:#0F8F9A !important} 
-
-
-        
-<!-- Hovers -->
-/* Colors */
-.w3-theme-blank,.w3-hover-theme-blank:hover{color:#000 !important; background-color:#000 !important}
-.w3-theme-o,.w3-hover-theme-o:hover{color:#000 !important; background-color:#ffb86b !important}
-.w3-theme-y,.w3-hover-theme-y:hover{color:#000 !important; background-color:#fdfd97 !important}
-.w3-theme-g,.w3-hover-theme-g:hover{color:#000 !important; background-color:#9ee09e !important}
-.w3-theme-b,.w3-hover-theme-b:hover{color:#000 !important; background-color:#9ee7f5 !important}
-.w3-theme-v,.w3-hover-theme-v:hover{color:#000 !important; background-color:#ecbdff !important}
-.w3-theme-r,.w3-hover-theme-r:hover{color:#000 !important; background-color:#ff6663 !important}
-
-.w3-hover-text-theme-r:hover {color:#ff6663 !important}
-.w3-theme-text-darktealblue{color:#0F8F9A !important}
-
-.w3-theme-yellow,.w3-hover-theme-yellow:hover{color:#000 !important; background-color:#FFCE74 !important}
-</style>
-
-
-
 
 
 <body>
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-theme-darktealblue w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow"><i class="fa fa-home"></i></a>
-      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">About</a>
-      <a href="#events" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Upcoming Events</a>
-      <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hover-theme-yellow w3-hide-small">Committee</a>
-      </div>
+
+<!-- Header Image -->
+<div class="w3-display-container w3-center">
+  <img src="/images/Header-wide.png" alt="Bath SIAM-IMA" style="width:100%">
 </div>
 
-  
-  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-theme-darktealblue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
-    <a href="#events" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Upcoming Events</a>
-    <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Committee</a>
-</div>
+ <!-- About the Society -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="about">
+  <h2 class="w3-wide w3-text-darktealblue">About Us</h2>
+  <p class="w3-justify" style="font-size:17px; line-height:1.8; max-width:850px; margin:auto;">
+    We are the student chapter affiliated with both <b>SIAM</b> (the Society for Industrial and Applied Mathematics)
+    and the <b>IMA</b> (Institute for Mathematics and its Applications) at the <b>University of Bath</b>.  
+    <br><br>
+    Our committee of PhD students organises <b>talks, socials, and conferences</b> to bring together those passionate 
+    about <b>applied mathematics and its real-world impact</b>. Membership is open to all students at the University of Bath.
+  </p>
 
+  <hr style="width:60%; margin:40px auto; border-color:#99D0C8;">
 
+  <h3 class="w3-text-darktealblue w3-padding-16"><i class="fa-solid fa-user-group"></i> How to Join</h3>
 
+  <div class="w3-content" style="text-align:left; max-width:750px; margin:auto;">
+    <ul style="font-size:16px; line-height:1.8; list-style:none; padding-left:0;">
+      <li class="w3-padding-small">
+        <i class="fa-solid fa-envelope w3-text-siamblue"></i>
+        <b> Join the Bath Student Chapter:</b>  
+        Fill out our quick <a href="https://docs.google.com/forms/d/e/1FAIpQLSemVmgtfN6T22bDkECAQ6SpkzoPLsaUFhyNChOaYiDPLyxhYw/viewform" target="_blank" class="w3-text-siamblue"><b>Google Form</b></a> 
+        to be added to our mailing list.
+      </li>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+      <li class="w3-padding-small">
+        <i class="fa-solid fa-book-open w3-text-siamblue"></i>
+        <b> Join SIAM:</b> Once you’re a member of our chapter, you can join SIAM 
+        <a href="https://www.siam.org/membership/join-siam/individual-members/student" target="_blank" class="w3-text-siamblue"><b>here</b></a>.  
+        Select <b>University of Bath</b> as your chapter to access journals, activity groups, and funding opportunities.
+      </li>
 
-  <!-- Header Image (Computer) -->
-  <div class="w3-display-container w3-center w3-hide-small">
-    <img src="/images/Header-wide.png" alt="Header-wide.png" style="width:100%">
-    </div>
-  </div>
-  
-  <!-- Header Image (Phone) -->
-  <div class="w3-display-container w3-center w3-hide-medium w3-hide-large">
-    <img src="/images/Header-phone.png" alt="Header-phone.png" style="width:100%">
-    </div>
-  </div>
-  
-
-  <!-- About the Society -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1200px" id="about">
-    <h2 class="w3-wide">Welcome to the Bath SIAM-IMA Student Chapter!</h2>
-    <h3 class="w3-theme-text-darktealblue">About Us</h3>
-    <p class="w3-justify">We are the student chapter affiliated with both SIAM (the Society for Industrial and Applied Mathematics) and the IMA (Institute for Mathematics and its Applications) at the University of Bath. We are run by a committee of PhD students from the maths department. We organise math-related events for our members, and overall provide the space for individuals interested in applied maths to meet, socialise, and form a community. Our society is open to students at the University of Bath from any discipline, but have a keen interest in maths and its application in the world!  </p>
-    <br>
-      <h3 class="w3-theme-text-darktealblue">How to Join</h3>
-    <p class="w3-justify">The Bath Student Chapter is open to students of the University of Bath and is free, as is joining SIAM as a student member (provided you have joined the Bath Student Chapter). It cost £10 to join the IMA as a full-time student. Please not that it is <b>not</b> necessary to join either of these societies to get involved with the Bath Student Chapter, however, we do encourage you to join at least one.
-    </p>
-    <ul class="w3-justify">
-      <li><b>To join the Bath student chapter:</b> Please fill out our quick <a href="https://docs.google.com/forms/d/e/1FAIpQLSemVmgtfN6T22bDkECAQ6SpkzoPLsaUFhyNChOaYiDPLyxhYw/viewform"><b>Google Form</b></a>. We will add you to our mailing list, after which you will receive an email, officially affiliating you with the Bath Student Chapter! Note that it make take some time for you to receive this confirmation. </li><br>
-      <li><b>To join SIAM:</b> Once you are a member of the Bath student chapter, you can join SIAM <a href="https://www.siam.org/membership/join-siam/individual-members/student"><b>on their website</b></a> - be sure to select the University of Bath as your affiliated student chapter. Joining SIAM gives you exclusive access to SIAM journals, specialised SIAM activity groups and funding opportunities for conferences across the world.</li><br>
-      <li><b>To join the IMA:</b> Students are also welcome to become members of the IMA (PhD and Masters students are eligible for Affiliate Membership at the student rate of £10 per year whilst in full time education) and anyone can sign up for the <a href="https://ima.org.uk/support/student/estudent-newsletter/"><b>free eStudent newsletter</b></a>. See the <a href="https://ima.org.uk/membership/how-to-join/"><b>IMA website</b></a> for full details on how to join.</li>
+      <li class="w3-padding-small">
+        <i class="fa-solid fa-newspaper w3-text-siamblue"></i>
+        <b> Join the IMA:</b> PhD and Masters students can become Affiliate Members for £10 per year,  
+        or sign up for the <a href="https://ima.org.uk/support/student/estudent-newsletter/" target="_blank" class="w3-text-siamblue"><b>free eStudent newsletter</b></a>.
+      </li>
     </ul>
   </div>
-  
-  <hr>
-  <!-- Upcoming Events -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1200px" id="events">
-      <h2 class="w3-wide">Upcoming Events</h2>
-      <br>
-      <p class="w3-justify"></p>
-        <b>University Challenge and Free Pizza Launch event</b> - Thursday 5th December 18:00-20:00, Wolfson Lecture Theatre (4W 1.7)
-        <br>
-        <br>
-        Join us as we kick off the new academic year with an exciting event hosted by the Bath Student Chapter: a University Challenge - Countdown fusion quiz! Think you have what it takes to tackle mathematical questions under pressure? Test your skills against our very own version of Jeremy Paxman and see if your team can emerge victorious. Teams will be formed on the day, so just bring your enthusiasm and competitive spirit. Plus, keep an eye out for a potential bonus round of math-themed Pictionary—details to be confirmed! Don’t miss out on an evening of fun, friendly competition, and brain-teasing challenges!
-RSVP: Please fill out this Google form if you plan on attending. This is so we have an idea of numbers for catering purposes, and can account for any dietary requirements. Note you do not have to be a member of the Student Chapter to attend this event.
-        <br>
-        <b><a href="https://docs.google.com/forms/d/e/1FAIpQLSeaSyMnPHFzGqS4EdaFPISIrZL8xKmtQ1N3EGwh88VHGlLeew/viewform" target="blank">Sign up here</a></b></p>
-  </div>
-  
-
-
-
-  <hr>
-<!-- Committee (Wide) -->  
-<div class="w3-cell-row w3-center w3-hide-small">
-<h2 class="w3-wide">Current Committee (2025/2026)</h2>
-  <div class="w3-col w3-container" style="width:20%"><img src="https://samba.ac.uk/wp-content/uploads/2023/10/Charlie-scaled-e1696248594820.jpg" alt="CC" style="width:60%" class="w3-circle w3-hover-opacity"><h4>Charlie Cameron</h4><p>President</p></div>
-  <div class="w3-col  w3-container" style="width:20%"><img src="https://samba.ac.uk/wp-content/uploads/2023/10/Amin-scaled.jpg" alt="AS" style="width:60%" class="w3-circle w3-hover-opacity"><h4>Amin Sabir</h4><p>Treasurer</p></div>
-  <div class="w3-col w3-container" style="width:20%"><img src="images/JC.jpg" alt="PC" style="width:60%" class="w3-circle w3-hover-opacity"><h4>John Carlo Dimaculangan</h4><p>Secretary</p></div>
-  <div class="w3-col w3-container" style="width:20%"><img src="https://samba.ac.uk/wp-content/uploads/2022/09/Matthias-Ehrhardt-e1681310785956.jpg" alt="ME" style="width:60%" class="w3-circle w3-hover-opacity"><h4>Matthias Ehrhardt</h4><p>Faculty Advisor</p></div>
-<p>For all enquires please email at <a href="mailto:siam-ima@bath.ac.uk"><b>siam-ima@bath.ac.uk</b></a></p>
 </div>
 
-  
-<!-- Committee (Phone) -->    
-<!-- <div class="w3-container w3-padding-64 w3-center w3-hide-medium w3-hide-large" id="team">
-    <h2 class="w3-wide">Current Committee (24/25)</h2>
-    <div class="w3-row">
-        <div class="w3-col  w3-container" style="width:50%"><img src="https://samba.ac.uk/wp-content/uploads/2023/10/Charlie-scaled-e1696248594820.jpg" alt="CC" style="width:70%" class="w3-circle w3-hover-opacity">
-        <h3>Charlie Cameron</h3>
-        <p>President</p></div>
-        <div class="w3-col  w3-container" style="width:50%"><img src="https://samba.ac.uk/wp-content/uploads/2023/10/Amin-scaled.jpg" alt="AS" style="width:70%" class="w3-circle w3-hover-opacity">
-        <h3>Amin Sabir</h3>
-        <p>Treasurer</p></div>
-         <div class="w3-col  w3-container" style="width:50%"><img src="https://samba.ac.uk/wp-content/uploads/2024/09/DSC_0082-scaled-e1727860596113.jpg" alt="PC" style="width:70%" class="w3-circle w3-hover-opacity">
-        <h3>John Carlo Dimaculangan</h3>
-        <p>Secretary</p></div>
-        <br>
-        <div class="w3-col  w3-container" style="width:50%"><img src="images/JC.jpg" alt="ME" style="width:70%" class="w3-circle w3-hover-opacity">
-        <h3>Matthias Ehrhardt</h3>
-        <p>Faculty Advisor</p></div>
-      </div>
-      <br>
-      
-</div> -->
 
 
+
+<!-- 🚀 Central Upcoming Events Section -->
+<div id="events" class="w3-center">
+  <h2>Upcoming Events</h2>
+  <div class="event-card">
+    <h3>🚀 SIAM Postgraduate Conference 2025</h3>
+    <p><i class="fa fa-calendar"></i> <b>Tuesday, 25th November 2025</b></p>
+    <p><i class="fa fa-map-marker"></i> <b>Engineers’ House, Bristol</b></p>
+    <hr style="width:60%;margin:auto;margin-bottom:20px;">
+    <p>
+      Join us for a <b>one-day, student-led conference</b> celebrating mathematical sciences at the stunning 
+      <b>Engineers’ House, Bristol</b>! Expect <b>talks, posters, and networking</b> with researchers from across the UK.  
+      Whether you’re a <b>PhD or Master’s student</b>, this is the perfect opportunity to share your research, connect, and explore exciting new areas of applied maths.
+    </p>
+    <p>
+      🎓 <b>Free to attend</b> – just arrange your own transport.<br>
+      ✏️ Want to present? Submit a <b>talk title or poster idea</b> when you sign up below!
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaSyMnPHFzGqS4EdaFPISIrZL8xKmtQ1N3EGwh88VHGlLeew/viewform" target="_blank"
+       class="w3-button w3-theme-siamblue w3-round-xlarge w3-xlarge w3-hover-theme-yellow">
+       💡 Sign Up Here
+    </a>
+  </div>
+</div>
 
 <hr>
-<!-- End Page Content -->
+
+ 
+
+  
+  <hr class="w3-opacity">
+
+  
+  <!-- Committee -->
+  <div id="team" class="w3-container w3-center w3-padding-64">
+    <h2 class="w3-wide">Current Committee (2025/2026)</h2>
+    <div class="w3-row-padding w3-center" style="margin-top:40px">
+      <div class="w3-quarter">
+        <img src="https://samba.ac.uk/wp-content/uploads/2023/10/Charlie-scaled-e1696248594820.jpg" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h4>Charlie Cameron</h4><p>President</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="https://samba.ac.uk/wp-content/uploads/2023/10/Amin-scaled.jpg" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h4>Amin Sabir</h4><p>Treasurer</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="images/JC.jpg" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h4>John Carlo Dimaculangan</h4><p>Secretary</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="https://samba.ac.uk/wp-content/uploads/2022/09/Matthias-Ehrhardt-e1681310785956.jpg" style="width:70%" class="w3-circle w3-hover-opacity">
+        <h4>Matthias Ehrhardt</h4><p>Faculty Advisor</p>
+      </div>
+    </div>
+    <br>
+    <p>For enquiries, please email <a href="mailto:siam-ima@bath.ac.uk"><b>siam-ima@bath.ac.uk</b></a> or <a href="mailto:cgyc20@bath.ac.uk"><b>Charlie Cameron</b></a>.</p>
+  </div>
+
 </div>
 
-<footer class="w3-container w3-padding-16 w3-center w3-opacity w3-theme-white">
-  <a href="mailto:siam-ima@bath.ac.uk" class="fa fa-envelope w3-hover-opacity w3-xlarge" style="text-decoration: none;" aria-hidden="true" ></a>
-  <a href="https://twitter.com/SIAMBath" class="fa fa-twitter w3-hover-opacity w3-xlarge" style="text-decoration: none;" aria-hidden="true"></a>
-  <a href="https://www.instagram.com/siambath/" class="fa fa-instagram w3-hover-opacity w3-xlarge" style="text-decoration: none;" aria-hidden="true"></a>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+<!-- Footer -->
+<footer class="w3-container w3-padding-16 w3-center w3-opacity w3-theme-lightteal">
+  <a href="mailto:siam-ima@bath.ac.uk" class="fa fa-envelope w3-hover-opacity w3-xlarge" style="text-decoration:none;"></a>
+  <a href="https://twitter.com/SIAMBath" class="fa fa-twitter w3-hover-opacity w3-xlarge" style="text-decoration:none;"></a>
+  <a href="https://www.instagram.com/siambath/" class="fa fa-instagram w3-hover-opacity w3-xlarge" style="text-decoration:none;"></a>
+  <p class="w3-small">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+
+<script>
+// Responsive Navbar
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
 
 
 
