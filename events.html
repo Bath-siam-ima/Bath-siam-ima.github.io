@@ -7,164 +7,204 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <title>Bath SIAM-IMA | Events</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <script src="https://kit.fontawesome.com/e9dd2cd32d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <script src="https://kit.fontawesome.com/e9dd2cd32d.js" crossorigin="anonymous"></script>
 
-    <style>
-      body { font-family: "Lato", sans-serif; background-color: #ffffff; }
-
-      /* Theme Colours */
-      .w3-theme-siamblue {color:#fff !important; background-color:#0073BC!important}
-      .w3-theme-darktealblue {color:#fff!important; background-color:#0F8F9A !important}
-
-      /* Event Card Styling */
-      #events {
-        background: #fff;
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      #events h2 {
-        font-size: 48px;
-        color: #0F8F9A;
-        letter-spacing: 2px;
-        margin-bottom: 40px;
-        text-transform: uppercase;
-      }
-
-      .event-card {
-        max-width: 900px;
-        margin: auto;
-        background: white;
-        border-radius: 25px;
-        padding: 50px 40px;
-        box-shadow: 0 8px 22px rgba(0,0,0,0.15);
-        animation: fadeInUp 1.2s ease;
-        text-align: left;
-      }
-
-      .header-parallax {
-          width: 100%;
-          max-width: 100vw;
-          height: 0;
-          padding-top: 23.8%;  /* 1013 / 4259 aspect ratio */
-          background-image: url("/images/Siam_conference_header.png");
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          position: relative;
-          overflow: hidden;
-      }
-
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(40px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .event-card h3 {
-        color: #0073BC;
-        font-size: 30px;
-        margin-top: 0;
-      }
-
-      .event-card h4 {
-        color: #0F8F9A;
-        margin-bottom: 10px;
-      }
-
-      .event-card p {
-        font-size: 17px;
-        line-height: 1.7;
-        margin-bottom: 15px;
-      }
-
-      .event-card ul {
-        margin-left: 20px;
-        line-height: 1.7;
-      }
-
-      .event-card a.w3-button {
-        transition: all 0.3s ease;
-        margin-top: 25px;
-      }
-
-      .event-card a.w3-button:hover {
-        transform: scale(1.05);
-      }
-      .email {
-            font-family: monospace;
-            color: #2c3e50;
-            background-color: #f0f0f0;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-
-
-      footer {
-        padding: 30px;
-        background-color: #0F8F9A;
-        color: white;
-        text-align: center;
-      }
-    </style>
-    <script>
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header-parallax');
-    if (header) {
-      const scrolled = window.pageYOffset;
-      header.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+  <style>
+    body { 
+      font-family: "Lato", sans-serif; 
+      background-color: #ffffff; 
+      line-height: 1.6;
     }
-  });
-  </script>
 
-  <!-- This ensures that the OSM remains zoomed in-->
-  <script>
-    window.addEventListener('load', () => {
-        const osmIframe = document.querySelector('iframe');
-        if (osmIframe) {
-            osmIframe.src = osmIframe.src;
-        }
-    });
-    </script>
+    /* Theme Colours */
+    .w3-theme-siamblue {color:#fff !important; background-color:#0073BC!important}
+    .w3-theme-darktealblue {color:#fff!important; background-color:#0F8F9A !important}
 
+    /* Event Card Styling */
+    #events {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-  </head>
+    #events h2 {
+      font-size: 48px;
+      color: #0F8F9A;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
 
+    .event-card {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 25px;
+      padding: 50px 40px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+      animation: fadeInUp 1.2s ease;
+      text-align: left;
+    }
 
-  <body>
+    .header-parallax {
+        width: 100%;
+        max-width: 100vw;
+        height: 0;
+        padding-top: 23.8%;  /* 1013 / 4259 aspect ratio */
+        background-image: url("/images/Siam_conference_header.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
 
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
+    .event-card h3 {
+      color: #0073BC;
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .event-card h4 {
+      color: #0F8F9A;
+      margin-bottom: 10px;
+      margin-top: 25px;
+      font-size: 22px;
+    }
+
+    .event-card p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .event-card ul {
+      margin-left: 20px;
+      line-height: 1.7;
+    }
+
+    .event-card a.w3-button {
+      transition: all 0.3s ease;
+      margin-top: 25px;
+    }
+
+    .event-card a.w3-button:hover {
+      transform: scale(1.05);
+    }
+    
+    .email {
+      font-family: monospace;
+      color: #2c3e50;
+      background-color: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    /* Improved Plenary Talk Section */
+    .plenary-section {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 25px 0;
+      border-left: 5px solid #0073BC;
+    }
+    
+    .plenary-title {
+      color: #0073BC;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    
+    .plenary-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .plenary-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    
+    .plenary-meta-item i {
+      color: #0F8F9A;
+    }
+    
+    .plenary-content {
+      margin-top: 20px;
+    }
+    
+    .plenary-content h5 {
+      color: #0F8F9A;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    .plenary-content p {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      padding: 30px;
+      background-color: #0F8F9A;
+      color: white;
+      text-align: center;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .event-card {
+        padding: 30px 20px;
+      }
+      
+      #events h2 {
+        font-size: 36px;
+      }
+      
+      .event-card h3 {
+        font-size: 24px;
+      }
+      
+      .plenary-section {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
   <!-- Header Image -->
   <div class="header-parallax"></div>
-
 
   <!-- Upcoming Events -->
   <div id="events">
     <div class="event-card">
       <h3>SIAM Postgraduate Conference 2025</h3>
       <p><i class="fa fa-calendar"></i> <b> Monday, 24th November 2025</b></p>
-      <p><i class="fa fa-map-marker"></i> <b>Engineers’ House, Clifton Down, Bristol, BS8 3NB.</b></p>
+      <p><i class="fa fa-map-marker"></i> <b>Engineers' House, Clifton Down, Bristol, BS8 3NB.</b></p>
       <hr style="width:60%; margin:auto; margin-bottom:20px;">
 
-      <h4 style="color: #d9534f; font-weight: bold;"> ⏰ Registration Deadline: <b>Friday, 7th November 2025, 23:59pm</b> </h4>
+      <h4 style="color: #d9534f; font-weight: bold;"> ⏰ Registration Deadline : <b>Friday, 7th November 2025, 23:59pm</b> </h4>
+      
       <h4>About the Event</h4>
       <p>
-        Join us for a <b>one-day, student-led conference</b> celebrating mathematical sciences at the stunning Engineers’ House!  
-        Expect <b>talks, posters and networking with researchers and fellow students from across the UK.  
-        Perfect for <b>PhD and Master’s students</b> looking to share research and explore applied mathematics in real-world contexts.
+        Join us for a <b>one-day, student-led conference</b> celebrating mathematical sciences at the stunning Engineers' House!  
+        Expect <b>talks, posters and networking</b> with researchers and fellow students from across the UK.  
+        Perfect for <b>PhD and Master's students</b> looking to share research and explore applied mathematics in real-world contexts.
       </p>
 
       <h4>Provisional Schedule</h4>
-      Note, that please do check this page as the schedule may change closer to the date.
+      <p>Note: Please check this page as the schedule may change closer to the date.</p>
       <ul>
         <li><b>10:00 – 10:30:</b> &nbsp Registration & Welcome Coffee</li>
         <li><b>10:30 – 11:30:</b> &nbsp Keynote Talk </li>
@@ -194,11 +234,69 @@
            💡 Sign Up Here
         </a>
       </div>
+      
       <h4>Funding</h4>
-        <p>
-          There are limited funds available for transport/accomodation of up to £150. Please indicate if you would like to apply to this on the registration form.
-        </p>
-      <h4>Contact details</h4>
+      <p>
+        There are limited funds available for transport/accommodation of up to £150. Please indicate if you would like to apply to this on the registration form.
+      </p>
+
+      <!-- Improved Plenary Keynote Talk Section -->
+      <div class="plenary-section">
+        <h4 class="plenary-title">Morning Keynote talk</h4>
+        
+        <div class="plenary-meta">
+          <div class="plenary-meta-item">
+            <i class="fa fa-user"></i>
+            <span>Speaker: Dr Rachel Bennett</span>
+          </div>
+          <div class="plenary-meta-item">
+            <i class="fa fa-clock-o"></i>
+            <span>Duration: 50 minutes</span>
+          </div>
+        </div>
+        
+        <div class="plenary-content">
+          <h5>Title</h5>
+          <p><b>Hydrodynamic coordination and symmetry breaking in arrays of model cilia</b></p>
+          
+          <h5>Abstract</h5>
+          <p>On surfaces with many cilia, individual cilia coordinate their beat cycles in the form of metachronal waves. The coordinated beating facilitates self-propulsion of ciliated microorganisms and creates efficient fluid flow, which is important in several human organs.</p>
+          <p>Here, we consider the connection between single cilium characteristics and the collective behaviour. A theoretical framework is presented using an array of model cilia coordinated by hydrodynamic interactions. We calculate the dispersion relation for metachronal waves and perform a linear stability analysis to identify stable waves.</p>
+          <p>This framework shows how properties of the emergent wave depends on the geometric properties of cilia in the array and the beat pattern of an individual cilium. Analytical results are compared with agent-based numerical simulations of hydrodynamically coupled cilia, and we find quantitative agreement with analytical predictions.</p>
+          
+          <h5>Speaker Bio</h5>
+          <p>Currently a lecturer at the University of Bristol since 2024 with research interests in mathematical modelling of the physics in biological systems.</p>
+        
+        </div>
+      </div>
+
+
+      <div class="plenary-section">
+        <h4 class="plenary-title">Afternoon Keynote talk</h4>
+        
+        <div class="plenary-meta">
+          <div class="plenary-meta-item">
+            <i class="fa fa-user"></i>
+            <span>Speaker: Dr Eric Hester</span>
+          </div>
+          <div class="plenary-meta-item">
+            <i class="fa fa-clock-o"></i>
+            <span>Duration: 50 minutes</span>
+          </div>
+        </div>
+        
+        <div class="plenary-content">
+          <h5>Title</h5>
+          <p><b>To be confirmed</b></p>
+          
+          <h5>Speaker Bio</h5>
+          <p>Currently a lecturer in applied mathematics at University of Bath, with research interests in fluid dynamics, numerical PDEs and asymptotic methods.</p>
+        
+        </div>
+      </div>
+
+
+      <h4>Contact Details</h4>
       <p>
         For any queries, feel free to email members of the Committee: 
         <strong>Charlie Cameron</strong> 📧 (<span class="email">cgyc20[at]bath.ac.uk</span>) or 
@@ -206,23 +304,17 @@
         We'll get back to you as soon as possible.
       </p>
 
-
-
       <h4>Getting There</h4>
-      <p>
-       <ul>
-            <li><b>Engineers’ House</b> is located in <b>Clifton, Bristol</b>.</li>
-            <li>The nearest train station is <b>Bristol temple meads</b>, which is around an hour walk from the venue.</li>
-            <li>Regular bus services also operate nearby, specifically the <b>Number 8 Bus</b>.</li>
-            <li>Please allow plenty of time to arrive at the venue.</li>
-            <li>On-site parking is available, but we strongly recommend using public transport where possible. Consider car sharing and allow extra time for traffic.</li>
-        </ul>
+      <ul>
+        <li><b>Engineers' House</b> is located in <b>Clifton, Bristol</b>.</li>
+        <li>The nearest train station is <b>Bristol Temple Meads</b>, which is around an hour walk from the venue.</li>
+        <li>Regular bus services also operate nearby, specifically the <b>Number 8 Bus</b>.</li>
+        <li>Please allow plenty of time to arrive at the venue.</li>
+        <li>On-site parking is available, but we strongly recommend using public transport where possible. Consider car sharing and allow extra time for traffic.</li>
+      </ul>
 
-      </p>
-
-      <!-- OpenStreetMap Embed (zoomed into Engineers' House) -->
-      <!-- OpenStreetMap Embed (Engineers' House - Correct Location) -->
-    <div class="w3-center" style="margin: 25px 0;">
+      <!-- OpenStreetMap Embed -->
+      <div class="w3-center" style="margin: 25px 0;">
         <iframe
             width="100%"
             height="400"
@@ -237,19 +329,14 @@
         <small>
             <a href="https://www.openstreetmap.org/?mlat=51.4586&mlon=-2.6259#map=19/51.4586/-2.6259" target="_blank">
             View larger map on OpenStreetMap
-        </a>
+            </a>
         </small>
-    </div>
-
-
-      
-
+      </div>
 
       <br><br>
       <a href="index.html" class="w3-button w3-white w3-border w3-round-large">⬅ Back to Home</a>
     </div>
   </div>
-
 
   <!-- Footer -->
   <footer>
@@ -259,7 +346,22 @@
     <p class="w3-small">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
- 
-        </body>
-    </html>
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header-parallax');
+      if (header) {
+        const scrolled = window.pageYOffset;
+        header.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+      }
+    });
 
+    // This ensures that the OSM remains zoomed in
+    window.addEventListener('load', () => {
+      const osmIframe = document.querySelector('iframe');
+      if (osmIframe) {
+        osmIframe.src = osmIframe.src;
+      }
+    });
+  </script>
+</body>
+</html>
